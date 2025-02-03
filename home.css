@@ -1,0 +1,272 @@
+@import url("style.css");
+
+.section-home {
+  padding-inline: 15vw;
+}
+
+.featured-box {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  min-height: 700px;
+}
+
+.featured-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 50%;
+}
+
+.featured-text .hello {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: -20px;
+  color: var(--text-color);
+}
+
+.featured-text .name {
+  font-size: 50px;
+  font-weight: 600;
+  margin-block: 20px;
+  color: #8749f2;
+  margin-bottom: 10px;
+}
+
+.text-info {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.text-btn {
+  display: flex;
+  border-radius: 6px;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.social_icons {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 5px;
+  gap: 32px;
+}
+
+.social_icons a {
+  color: var(--icon-color);
+}
+
+.social_icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  color: var(--icon-color);
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px 0px #8749f2;
+  cursor: pointer;
+}
+
+.social_icons .icon:hover {
+  box-shadow: 0px 1px 5px 3px #8749f2;
+}
+
+/* -- Featured Image  */
+
+.featured-image {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 50%;
+  margin-top: 10%;
+}
+
+.featured-image .image {
+  margin-top: 10%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.featured-image .image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 60vh;
+}
+
+/* Animation Code ---- */
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate__fadeInUp {
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.animate__fadeIn {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.animate__fadeInLeft {
+  animation: fadeInLeft 2s ease-out forwards;
+}
+
+.featured-text .hello,
+.featured-text .name,
+.featured-text .social_icons {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.featured-text .name,
+.featured-text .social_icons {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+
+
+/*----- Lap and desktops Screen */
+@media (min-width: 769px) {
+}
+
+/*----- Tablet Screen */
+@media (max-width: 768px) {
+  .section-home {
+    padding-inline: 10vw;
+  }
+
+  .featured-box {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: max-content;
+    gap: 40px;
+  }
+
+  .featured-image {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .featured-image .image {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .featured-image .image img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .featured-text {
+    width: 90%;
+    text-align: center;
+    padding-left: 0;
+    min-height: auto;
+  }
+
+  .featured-text .hello {
+    font-size: 28px;
+  }
+
+  .featured-text .name {
+    font-size: 40px;
+  }
+
+  .text-info {
+    font-size: 14px;
+  }
+
+  .text-btn {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social_icons {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/*----- Mobile Screen */
+@media (max-width: 480px) {
+  .section-home {
+    padding-inline: 5vw;
+  }
+
+  .featured-image .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-image .image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .featured-text .name {
+    font-size: 32px;
+  }
+
+  .text-info {
+    font-size: 12px;
+  }
+
+  .text-btn {
+    gap: 10px;
+  }
+
+  .text-btn .btn {
+    font-size: 10px;
+  }
+
+  .social_icons {
+    gap: 15px;
+  }
+
+  .social_icons .icon {
+    width: 25px;
+    height: 25px;
+  }
+}

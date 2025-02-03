@@ -1,0 +1,284 @@
+@import url("style.css");
+
+.section-education-experience {
+  padding-inline: 10vw;
+  position: relative;
+}
+
+.edu-exp-section {
+  padding-top: 12%;
+}
+
+.edu-exp-topic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.edu-exp-topic h2 {
+  font-size: 2rem;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: transform 3s ease, opacity 3s ease;
+}
+
+.edu-exp-topic span {
+  color: var(--first-color);
+}
+
+.edu-exp-topic .line {
+  position: absolute;
+  top: 100%;
+  width: 0%;
+  transition: width 2s ease;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--first-color);
+}
+
+.edu-exp-content {
+  display: flex;
+  margin-top: 4%;
+}
+
+.exp-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: end;
+}
+
+.edu-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: end;
+}
+
+.exp-edu-container {
+  padding: 15px;
+  background-color: #1f1f1f;
+  height: max-content;
+  width: 90%;
+  border-radius: 6px;
+}
+
+.year {
+  background-color: #2a2a2a;
+  padding: 4px 8px;
+  width: max-content;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.role {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 8px;
+  color: var(--first-color);
+}
+
+.role span {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--text-color);
+}
+
+.description {
+  color: var(--text-color);
+  margin-top: 8px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+/* Animation */
+
+.edu-exp-topic.show-animate h2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.edu-exp-topic.show-animate .line {
+  width: 90px;
+  margin-left: 12px;
+}
+
+.edu-exp-content::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;
+}
+
+.exp-edu-container::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 2;
+  background-color: var(--first-color);
+}
+
+.exp-edu-container:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(6px);
+  width: 2px;
+  z-index: 1;
+  background-color: var(--first-color);
+  height: calc(100% + 15px);
+}
+
+.exp-edu-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.exp-edu-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.exp-edu-container:hover {
+  transform: translateY(-2px);
+}
+
+.exp-edu-container .role,
+.exp-edu-container .year,
+.exp-edu-container .description {
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.exp-edu-container:hover .role {
+  transform: translateY(-1px);
+}
+
+.exp-edu-container:hover .year {
+  transform: translateY(-1px);
+  color: var(--first-color);
+}
+
+.exp-edu-container:hover .description {
+  opacity: 0.8;
+}
+
+/* Responsive */
+
+/*----- Tab to Lap Screen */
+@media (max-width: 1000px) {
+  .section-education-experience {
+    padding-inline: 5vw;
+  }
+
+  .edu-exp-topic h2 {
+    font-size: 1.5rem;
+  }
+
+  .edu-exp-content {
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 5%;
+  }
+
+  .exp-content,
+  .edu-content {
+    width: 95%;
+  }
+
+  .exp-edu-container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .edu-exp-topic .line {
+    width: 70px;
+  }
+}
+
+/*----- Lap Screen */
+@media (min-width: 769px) {
+}
+
+/*----- Tablet Screen */
+@media (max-width: 768px) {
+  .edu-exp-section {
+    padding-top: 20%;
+  }
+}
+
+/*----- Mobile Screen */
+@media (max-width: 480px) {
+  .section-education-experience {
+    padding-inline: 3vw;
+  }
+
+  .edu-exp-topic h2 {
+    font-size: 1.25rem;
+  }
+
+  .edu-exp-topic span {
+    font-size: 1.2rem;
+  }
+
+  .edu-exp-content {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 5%;
+  }
+
+  .exp-content,
+  .edu-content {
+    width: 80%;
+  }
+
+  .exp-edu-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .year {
+    font-size: 12px;
+  }
+
+  .role {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .edu-exp-topic .line {
+    width: 60px;
+  }
+}

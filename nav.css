@@ -1,0 +1,232 @@
+@import url('style.css');
+
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background: var(--nav-color);
+  padding-inline: 10vw;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.nav-logo {
+  position: relative;
+  padding: 15px 0;
+}
+
+.nav-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav-menu,
+.nav-menu-list {
+  display: flex;
+}
+
+.nav-menu .nav-list {
+  list-style: none;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding-inline: 18px;
+}
+
+
+.nav-menu-btn i {
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--nav-icon);
+}
+
+.active-link {
+  position: relative;
+  font-weight: 600;
+  color: var(--first-color);
+  transition: 0.3s;
+}
+
+/* -- Side bar  */
+/* Sidebar styles (hidden by default) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+}
+
+.sidebar .nav-menu {
+  margin-top: 20px;
+}
+
+.sidebar .nav-menu-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .nav-list {
+  padding: 8px 0;
+  line-height: normal;
+}
+
+.sidebar .nav-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar .active-link {
+  position: relative;
+  font-weight: 600;
+  color: var(--first-color);
+  transition: 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #444;
+}
+
+.sidebar .nav-list a {
+  text-align: center;
+}
+
+.sidebar .contactBtn {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* -- Buttons--------- */
+
+.btn {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background: #8749f2;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #7320e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  z-index: 0;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+  }
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .nav-link {
+    padding-inline: 10px;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu-btn {
+    display: none;
+  }
+
+  .active-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 2px;
+    background: var(--first-color);
+  }
+  
+}
+
+
+@media (max-width: 768px) {
+  .nav-menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .contactBtn {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .nav-menu-btn {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--nav-icon);
+  }
+
+  .nav-menu-sidebar {
+    display: block;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+}

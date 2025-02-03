@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --body-color: #000;
+  --nav-color: #000;
+  --color-white: #fff;
+  --text-color-second: rgba(38, 37, 37);
+  --first-color: rgba(110, 87, 224);
+  --first-shadow: rgba(0, 0, 0, 0.1);
+
+  --box-color: #fff;
+  --nav-icon: #fff;
+  --logo-color: #fff;
+
+  --text-color: #f2f2f2;
+
+  --icon-color: #b2b2b2;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  /* background-color: var(--first-color); */
+}
