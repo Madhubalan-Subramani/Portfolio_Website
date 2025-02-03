@@ -218,4 +218,15 @@ circle {
 
 /*----- Mobile Screen */
 @media (max-width: 480px) {
+  .skills-section {
+    padding-top: 40%;
+  }
+
+  .skills-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .skills-header.show-animate .line {
+    margin-left: 40px;
+  }
 }

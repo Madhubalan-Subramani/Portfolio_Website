@@ -56,7 +56,7 @@
 .project-container {
   width: 100%;
   max-width: 350px;
-  background-color: #1f1f1f ;
+  background-color: #1f1f1f;
   border-radius: 6px;
   padding: 20px;
   display: flex;
@@ -153,7 +153,6 @@
   text-decoration: underline;
 }
 
-
 /* Animation */
 
 .project-topic.show-animate h2 {
@@ -184,11 +183,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-
-
-
-
-
 /* Responsive */
 
 /*----- Tab to Lap Screen */
@@ -200,7 +194,6 @@
 
 /*----- Lap Screen */
 @media (min-width: 769px) {
-  
   .project-container {
     max-width: 300px;
     padding: 15px;
@@ -223,11 +216,19 @@
     width: 90%;
     max-width: 400px;
   }
-
 }
 
 /*----- Mobile Screen */
 @media (max-width: 480px) {
+  .project-topic h2 {
+    font-size: 1.6rem;
+  }
+
+  .project-topic.show-animate .line {
+    width: 65px;
+    margin-left: 35px;
+  }
+
   .project-container {
     width: 95%;
     padding: 10px;
