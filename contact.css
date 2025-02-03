@@ -8,7 +8,6 @@
   background-attachment: fixed;
 }
 
-
 .contact-section {
   padding-inline: 10vw;
 }
@@ -151,30 +150,29 @@ textarea::placeholder {
   color: #888;
 }
 
-
 /* -----ANimation  */
 .contact-container {
   opacity: 0;
-  transform: rotateY(90deg) scale(0.9);  
-  transition: opacity 2s ease-in-out, transform 1.5s ease-in-out, background 2s ease-in-out;
+  transform: rotateY(90deg) scale(0.9);
+  transition: opacity 2s ease-in-out, transform 1.5s ease-in-out,
+    background 2s ease-in-out;
 }
 
 .contact-container.show-animate {
   opacity: 1;
-  transform: rotateY(0deg) scale(1);  
+  transform: rotateY(0deg) scale(1);
 }
 
-.contact-info, .contact-card {
+.contact-info,
+.contact-card {
   opacity: 1;
   transform: translateY(0);
 }
 
-.contact-info, .contact-card {
+.contact-info,
+.contact-card {
   transition: transform 3s ease-out, opacity 2s ease-out;
 }
-
-
-
 
 /* Responsive */
 
@@ -201,7 +199,6 @@ textarea::placeholder {
 
 /*----- Tablet Screen */
 @media (max-width: 768px) {
-
   .contact-section {
     padding-top: 10%;
   }
@@ -236,9 +233,36 @@ textarea::placeholder {
   .info-item a {
     font-size: 14px;
   }
-  
 }
 
 /*----- Mobile Screen */
 @media (max-width: 480px) {
+  .name-field input {
+    font-size: 12px;
+  }
+
+  .info-item p {
+    font-size: 12px;
+  }
+
+  .info-item a {
+    font-size: 12px;
+  }
+
+  input,
+  textarea {
+    font-size: 12px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .info-item p {
+    font-size: 12px;
+  }
+
+  .glass-card p {
+    font-size: 12px;
+  }
 }

@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function isInViewport(element) {
     let rect = element.getBoundingClientRect();
     let windowHeight = window.innerHeight;
-    return rect.top <= windowHeight * 0.85 && rect.bottom >= 0;
+    return rect.top <= windowHeight * 0.9 && rect.bottom >= 0;
   }
 
   if (isInViewport(skillHeader)) {

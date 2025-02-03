@@ -56,7 +56,7 @@
 .project-container {
   width: 100%;
   max-width: 350px;
-  background-color: #0a0a0a;
+  background-color: #1f1f1f ;
   border-radius: 6px;
   padding: 20px;
   display: flex;
@@ -131,10 +131,6 @@
   margin: 2% 0 0 0;
 }
 
-.pro-bottom-content{
-
-}
-
 .pro-link {
   display: flex;
   align-items: center;
@@ -143,6 +139,10 @@
   gap: 5px;
   color: var(--first-color);
   cursor: pointer;
+}
+
+.pro-link a {
+  text-decoration: none;
 }
 
 .pro-link i {
@@ -232,10 +232,21 @@
     width: 95%;
     padding: 10px;
   }
+
   .pro-tectnology {
     padding: 5px 8px;
   }
+
   .pro-tectnology img {
     height: 20px;
+  }
+
+  .project-describ {
+    margin-top: 10%;
+    font-size: 14px;
+  }
+
+  .section-project {
+    padding-inline: 10vw;
   }
 }

@@ -254,11 +254,13 @@
     flex-direction: column;
     gap: 20px;
     padding-left: 5%;
+    margin-top: 10%;
   }
 
   .exp-content,
   .edu-content {
-    width: 80%;
+    margin-inline: 10px;
+    width: 94%;
   }
 
   .exp-edu-container {

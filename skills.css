@@ -21,7 +21,7 @@
   font-size: 2rem;
   opacity: 0;
   transform: translateX(-20%);
-  transition: transform 3s ease, opacity 3s ease;
+  transition: transform 4s ease, opacity 3s ease;
 }
 
 .skills-header h2 span {

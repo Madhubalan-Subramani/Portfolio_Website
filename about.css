@@ -94,12 +94,7 @@
   color: #e0e0e0;
 }
 
-.download-btn {
-  display: flex;
-  border-radius: 6px;
-  cursor: pointer;
-  gap: 20px;
-}
+
 
 /* -----Animation --- */
 .about-text {
@@ -206,7 +201,7 @@
   }
 
   .details-column {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   
