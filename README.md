@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/23222a9a-e591-4135-b2fe-f33051696ad0)
+
 Welcome to my personal portfolio! This project showcases my skills, projects, and experiences using HTML, CSS, and JavaScript.
 
 🚀 Features
